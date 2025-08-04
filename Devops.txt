@@ -1,0 +1,1922 @@
+	DevOps Tools
+-------------
+
+
+1) Maven 
+2) gradle
+3) Git Hub ***
+4) Gitbucket 
+5) tomcat
+6) SonarQube 
+7) Nexux
+8) JFrog
+9) Terraform ***
+10) Ansible ***
+11) Docker****
+12) Kubernetes***
+13) Jenkins***
+14) ELK 
+15) JIRA
+16) Grafana
+17) Promethues 
+
+
+AWS Cloud (10+ services)
+----------------
+
+1) EC2 : Vertual server 
+        - EBS( Voulmes & snapshots) 
+        - Load balancing
+        - Auto Scaling 
+2) S3     : Unlimited storage
+3) RDS    : Relational database 
+4) IAM    : Identity & Access Management
+5) VPC    : Vertual private Cloud (Networking)
+6) Lambdas : Serverless Computing
+7) EKS    : Elastic Kubernetes service 
+8) loud Watch : Monitoring
+9) SNS    : Simple Notification service
+10) Route 53 : DNS
+11) Elastic Bean  stack
+
+============================================================================================================================================================
+
+                                                                           05-July-24
+                                                                   ---------------------------
+
+1) GitHub / Gitbucker  -> Source Code Management software
+2) Apache Maven
+3) Apache tomcat
+4) SonarQube
+5) Nexus repositoty
+6) Jenkins     -> We create Jenkins pipelines (CL/CD) using Jenkins software to automate our software build and deployment process. 
+7) Docker
+8) Kubernetes
+9) ELK Stack
+10) Ansible      -> To automate Configuration management/ copy files from one to other server / download required softwares on multiple machines
+11) Terraform
+
+
+
+Flow
+-----
+
+-> We create Jenkins pipelines (Ci/CD) using Jenkins to automate our software build and deploy process automatically. When a developer make some changes in the code and push it the GitHub, PollSCM will trigger and activate this pipelines. 
+
+
+-> Then Jenkins clone the code from GitHub and communicate to the Apache Maven to build the code to some executable format. 
+
+
+-> Once build process is completed, Then Jenkins tool will communicate to the Ansible. This ansible will download the required softwares to support the built application. 
+
+-> ANd the Ansible  will communicate to the Docker server and tell the docker to create an image for the application. 
+
+-> Once the docker image is created , its going to store in Docker hub. 
+
+-> DOcker hub is a repository where our docker images are stored. Docker is a containerization software... package all the required software (Java, Angular, DB)
+
+-> Once the Image is stored in Docker Hub, that image is going to execute with the help of Kubernetes. 
+
+_> Finally Our application is going to deploy with Kubernetes (Orchetration software). 
+
+-> Application deployment can be automated with Kubernetes software. 
+
+
+Then
+-------
+-> we use some monitoring softwares and moniter the application. 
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Terraform -> To create infrastructure in cloud platform
+
+Ansible ->To manage cobnfiguration
+
+Git Hub -> manage source code
+
+Maven -> build Tool
+
+Jenkins -> CI/CD 
+
+Kubernetes -> Orchestration 
+
+SonarQube -> 	For Code Review
+
+Nexus/JFrog -> Artifactory server
+
+Tomcat ->  Web server to run the web application 
+
+promethues & Grafana ->  Monitoring tools
+
+ELK -> to  monitor the application logs
+
+JIRA -> Application management 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                   IT Infrastructure management Issue.
+                                                               ----------------------------------------------    
+1) Security and privacy
+
+2) Scalability
+
+3) Availability
+
+4) Poor network issue
+
+5) Disaster recovery
+
+-------------------------------------------
+
+On premise Vs Cloud
+----------------------
+
+                                                                     Cloud Computing
+                                                             ---------------------------------
+
+-> Cloud computing is the on-demand delivery or IT resources over the internet with pay-as you- go pricing.
+
+-> Instead of buying, owning and maintaining physical data centers and servers, you can access technology services such as computing power, storage and databases, on an as needed basis from a cloud provider 
+
+Benifits
+-------------
+
+1) Pay As you go
+2) Low cost 
+3) Scalability
+4) Availability
+5) Reliability
+6) Security 
+7) Unlimited storage
+8) back up
+
+
+
+
+Tools Flow
+-----------------
+1) Maven 
+2) Gradle
+3) GitHub **
+4) Git bucket 
+5) Tomcat
+6) SonarQube
+7) Nexus
+8) JFrog
+9) Terraform **
+10) Ansible  **
+11) Docker  ** 
+12) Kubernetes **
+13) Jenkins **
+14) ELK 
+15) JIRA
+16) Grafana
+17) Promethues
+
+
+============================================================================================================================================================
+
+                                                                   08-July-24 Operating Systems
+                                                                   ---------------------------
+ 
+
+
+Windows OS
+--------------
+
+-> developed by Microsoft company
+
+-> Windows OS is Licenced (Commercial)
+
+-> Its single user based OS
+
+-> Security features are less in windows OS (Anti virus s/w required)
+
+-> Windows is GUI based (Graphical User Interface)
+
+-> Windows is recommended for personal use ... watch movies, play games, and  online classes... 
+
+
+
+Linex
+----------
+
+-> It is community based OS (Not specific to any company)
+
+->  Linex is free and open source OS (we can download the source code of the OS also ..)
+
+-> Linex is  multi user based OS
+
+->  Linex is highly secured (Anti virus is not required)
+
+-> Linex is CLI based OS (Command Line Interface)
+
+-> Linex OS is highly recommended for business use (server Management)
+
+EX : App server, DB server, Jenkins , Docker....
+
+
+
+History of Linex
+-------------------	
+
+-> Linux OS is developed by "Linus Torvalds"
+
+-> Linux torvalds identified some challanges/issues in Unix OS
+
+-> Linus Torvalds identified one OS which is matching wi his ideas. ... ie Minux OS
+
+-> Linex Torvalds used Minux OS and made some changes and released into market as new OS. ie. Linex OS
+
+               (Li) nus + Mi(nux) = Linux 
+
+
+============================================================================================================================================================
+
+                                                                   09-July-24 Working with EC2 instance
+                                                            --------------------------------------------------
+
+
+
+                                           gitBash/Mobaxterm/putty  (Connecting tools)
+                        Windows Machine -------------------------------------------------->Linex VM (EC2 Instance, EC2 server, virtual Box, EC2 VM)
+                                           SSH Connection (Secured Shell Connection)
+
+
+
+
+-> We create Linex VM in AWS cloud with the help of EC2 service 
+
+-> To connect with Linex machine we use SSH (Secured Shell )
+
+-> GitBash, Mobaxterm and putty are SSH connections tools. 
+
+
+
+Linex Commands
+--------------------
+
+Whoami  -> to print the logged in user name 
+pwd -> disply prasent working directory
+cal -> calender of the month
+cal 2025 -> calender of the 2025
+date -> date
+clear -> to clear the console
+mkdir (file name) -> to create a folder (Make directory)
+rmdir (filename) -> remove empty directory.
+ls -> List the content
+ls -l list the content in alphabetical order
+ls -lr -> To print the content in reverse alpha order
+ls -lt -> to list the content in timely order. recent file will be  top the list. 
+ls -ltr -> To list the content in timely order. recent files will be last
+
+
+touch (xyz.txt) -> to create a empty text file 
+cd -> to change the directory 
+cd ..  -> To come out of the directory one step back
+
+ls -l AWS -> To list the content of AWS file
+
+mv <old file name> <New File name>  -> TO change the file name
+
+mv <present location> <other location>  -> To move the files one place to another
+
+rm -rf <dir name> --> This will delete all the files in directory and delete the folder
+
+rm xyz.txt  -> To delete file 
+
+----------------
+
+cat > <filename>  to create a file and write data
+cat >> to append data to an existing file.
+cat <file name>  to print the data in the file
+cat -n <file name> to print the data with series numbers.
+tac <file name> to print the data in reverse
+
+
+============================================================================================================================================================
+
+                                                                   10-July-24 linex commands
+                                                            --------------------------------------------------
+
+
+
+cp f1.txt f2.txt -> Copies f1 data to f2
+
+cat f1.txt f2.txt -> Copies f1 data to f2
+
+cat f1 f2 > f3  -> Copies f1, f2 data to f3
+
+tac f1.txt -> Prints the data of f1 in reverse order
+
+---------------------
+
+head f1.txt  -> print first 10 lines of the file
+
+head -n 20 f1.txt -> prints given number of lines of the file
+
+tail f1.txt -> Prints last 10 lines of file 
+
+Note : To get latest log messages from log file we use tail  command 
+
+-------------------------------------
+
+Grep 'teen' f4.txt -> prints the data that is matching with 'teen'
+
+grep -i 'TeeN' f4.txt -> avoid case sensitive and prints matching data.
+
+grep -n -i 'Teen' f4.txt -> Prints data with line number, avoid case sensitive
+
+grep -v 'teen' f4.txt  -> avoids data wit 'teen' keyword
+
+Note : Grep stands for Global Regular Expression Print
+
+-> Using Grep command we can search for content in the file
+
+
+grep 'teen' * -> Prints matching data from all the files
+--------------------------------
+
+
+REQ : I want 'teen' matching words from last 10 lines
+
+tail f4.txt | grep 'teen'
+
+
+------------------------------------
+
+wc f1.txt -> prints n.o lines , n.o words, n.o char
+
+15 15 90 f4.txt
+
+========================
+Text editor in linex
+========================
+
+-> vi(visual editor) editor is a default editor in Linux machines
+
+-> Using vi we can create new files and we can modify existing file data.
+
+-> vi command is having 3 modes
+    
+     1) Command mode (just to open the file)
+          
+         vi <file name>
+
+     2) insert mode (to edit the  file) ---> Press 'i' in keyboard
+
+     3) ecs mode (to come out from insert mode)   --> Press 'esc' in keyboard
+     
+           :wq to save the data 
+   
+           :q! to not save changes to data
+   
+        
+
+
+============================================================================================================================================================
+
+                                                                   11-July-24 linex commands
+                                                            --------------------------------------------------
+
+
+
+SED commads
+----------------
+
+-> sed stands for streem editor in linex
+
+-> SED is used to process the data (substitute, delete, insert)
+
+-> Using SED commands we can perform operations on the file without opening the file
+
+-> SED is very powerful command in linex
+
+   
+     sed 's/linex/unix/' f1.txt     --> replace first occurance of linex with unix
+
+     sed 's/linex/unix/2' f1.txt    --> replace 2nd occurrence of linex with unix                NOTE :   all this just process the  data and print
+     
+     sed 's/linex/unix/3' f1.txt    --> replace 3rd occurrence of linex with unix
+ 
+     sed 's/linex/unix/g' f1.txt    --> replace  linex with unix entire file
+
+ 
+     sed -i 's/linex/unix/g' f1.txt  --> '-i' process the data and save permanently                   NOTE : '-i' saves the data
+
+------------------------------------
+
+   delete
+-------------
+
+    sed -i '1d' f1.txt   --> this delete the first line of data from the  file,  
+
+         1 stands for line number
+         d stands for delete
+
+    sed -i '4d' f1.txt   --> this delete fourth line of data from the  file
+
+
+    sed -i '$d' f1.txt   --> delete last line in the file
+
+    sed -i 'n,$d' f1.txt  --> Delete Nth line to last line
+
+    sed -i '5,$15' f1.txt  --> delete 5th line to 15th line
+ ----------------------------------------------------------------
+
+   print 
+---------------
+
+   sed -n '5,10p' f1.txt   --> print the lines from 5 to 10
+
+
+insert
+--------
+
+     sed '$a\i am from Ashok it' f1.txt   --> this inserts data in the last line
+
+    sed '3i\ i am from india' f1.txt     --> inserts data in 3rd line
+
+
+
+=========================
+  User Management
+=========================
+  
+-> Linex is a mutli user based OS
+
+-> Multiple users can acess single linex machine and can perform multi tasking.
+
+Note : EC2 user is a default user in amazon linex machine vm. 
+
+-> Within one linex machine we can create multiple user accounts
+
+-> when we create user accounts, for each user one home directory will be created 
+
+   ec2-user => /home/ec2-user
+
+   John => /home/John
+  
+   smith => /home/smith
+
+--------------------------------------
+
+pwd --> To print the present working directory
+
+sudo useradd <user name>  --> To create a user in linex machine
+
+sudo passwd <user name>   --> to set the password for the user and update the password
+
+cat /etc/passwd    --> display all user created
+
+su <user name>  --> Switch user account  
+
+cd ~ --> navigate to current user home directory
+
+sudo userdel <user name>  --> remove user account
+
+sudo userdel <user name>  --remove  --> delete user account along with user home directory
+
+sudo usermod -l <New name> <old name>  
+
+
+=================================
+Working with user Groups
+=================================
+
+--> When we create user in linex, for every user one user group also will be created with the given user name.
+
+#  to display all the user groups in linex
+
+   cat /etc/group
+
+#   to create a group 
+ 
+    sudo groupadd <group name>
+
+# To know the user information and groups / display user belongs to which group
+
+   id <user name>
+
+
+Note : To manage the user permissions easily, we will add users to group and we will manage the permissions at group level
+
+
+#  to add user to a group
+  
+    sudo usermod -aG cloud smith
+
+# To remove the user form the group
+
+    sudo gpasswd -d <user name> <user group>
+
+# To display how many users in a group
+
+     sudo lid -g <group name>
+
+# delete group
+  
+   sudo groupdel <group name>
+
+# Changing group name
+
+   sudo groupmod -n <new name> <old name>
+
+
+--------------------------------------------------
+
+# To show all the user encrypted passwords
+
+  sudo cat /etc/shadow
+
+
+
+============================================================================================================================================================
+
+                                                                   12-July-24 linex commands
+                                                            --------------------------------------------------
+
+
+
+=> In linex to enable password based authentication we need to modify below two files. 
+
+      1) sudoers 
+     
+      2) sshd_config
+
+
+What is sudoers File in Linex
+================================
+
+=> Its very important configuration file in linex machine
+
+=> Using this file we can control which user can run command as a superuser
+
+
+######################### Giving sudo permissions for a suer ##########################
+
+# Open 	sudoers file
+
+$ sudo visudo
+
+# Add below line
+ 
+ <user name> ALL=(ALL:ALL) ALL
+		
+=> After making changes to close sudoers file => (CTRL + X + Y + Enter)
+
+
+
+======================================================
+How to enable password based authentication in linex ?
+======================================================
+
+=> In linex VM, by default password based authentication is no
+
+=> If we want to connect with linex VM, using username and password then we need to set that value as yes. \
+
+=> We will modify this is sshd_config file
+
+
+
+#  To Display sshd_configuration file data
+
+    $ sudo cat /etc/ssh/sshd_config
+
+# To edit the file 
+
+   sudo vi /etc/ssh/sshd_config -> press 'i' -> edit enable password based autehntication as yes
+                                        press 'esc' 
+                                       -> press ':wq'
+
+# Restart ssh service 
+
+sudo systemctl restart sshd
+
+==> Now we can connect with linex VM with username and password
+
+ssh username@publicIP 
+
+
+============================
+File permissions in Linex
+============================
+
+=> Using file permissions we can secure our files and file data
+
+=> we have 3 types of permissions in linex
+
+     r => read
+
+     w => write
+ 
+     e => execute
+
+=> File / directory permissions will be represented like below. 
+
+    rwxrwxrwx f1.txt
+
+=> File  permission contains in 9 characters 
+
+      first 3 characters -> User / owner permission
+  
+      second 3 characters -> group permissions
+
+      last 3 characters  -> other permissions
+
+     Ex : 
+
+       r--r-xr--  f1.txt
+ 
+             user  -> read
+             group -> read + write
+             other -> read
+
+       r-xrw--w-  f1.txt
+
+             user  -> read + execute
+             group -> read + write
+             other -> write 
+
+
+=> To change from current directory to others directory
+
+      	 cd /home/raju
+  
+       sudo cd /home/raju
+
+
+=> To print all the directories and files on the linex machine.
+
+
+====================================
+File permissions in numeric format
+====================================
+
+0 => no permissions
+
+1 => Execute
+
+2 => Write
+
+3 => (2+1) write + execute
+
+4 => read
+
+5 => (4+1) read + execute
+
+6 => (4+2) Read + write 
+
+7 => (6+1) Read + write + execute 
+
+
+------------------------------------------------
+
+=>  u+rwx, g+rw, o+rx
+
+        chmod 765 f1.txt
+
+=> u+r, g+rx, o+rw
+  
+       chmod 456 f1.txt
+
+=> u+rwx, g+rwx, o+rwx
+ 
+     chmod 777 f1.txt
+
+=> u-rwx, g-rwx, o+rwx
+
+    chmod 7 f1.txt
+
+
+============================================================================================================================================================
+
+                                                                   15-July-24 
+                                                            ----------------------------
+
+
+Chown permissions in linex
+---------------------------------
+
+=> raju giving f1.txt file ownership to rani
+
+      sudo chown rani f1.txt
+
+
+=> Raju changing the group name of f1.txt file
+
+     sudo chown :rani f1.txt
+
+=> changing owner name and group name at a time 
+
+     sudo chown rani:rani f1.txt
+
+
+
+
+Whats the dirrefence b/w chmod and chown command ?
+----------------------------------------------------
+
+-> Chmod command used to give or remove the permissions from a owner or group or a user
+
+-> chown command is used to change the owner name and group name of a file or directory
+
+
+
+
+How to find the location of files on linex ? 
+------------------------------------------------
+
+=> In linex we can use "find" command to search file paths
+
+# Search for the files which are having name as f1.txt
+
+  sudo find /home -name f1.txt
+
+# Search for empty files inside /home
+
+  sudo find /home -type f -empty 
+
+# Search for empty derectories inside /home
+
+  sudo find /home -type d -empty 
+
+# print 30 days old files in linex
+
+  sudo find /home -mtime 30 -print
+
+# print 1 day old files in linex
+
+ sudo find /home -mtime 1 -print                  (-mtime -> modification time)
+
+# delete 30 days old files in linex
+
+sudo find /home -mtime 30 -delete
+
+
+
+Working with zip files in linex
+=====================================
+
+=> zip is used for file archieve (compress)
+
+# syntax to create zip file  
+
+     zip <zip file name> <content>
+
+# to create some empty files
+
+     touch f1.txt, f2.txt, f3.txt
+
+# Create zip files with content
+
+     zip ashok *.txt
+
+# Unzip the zip file 
+
+  unzip ashok.zip
+
+-------------------------------------------------------------------------------------------
+
+Networking commands
+=====================
+
+# ping => To check connectivity
+
+    ping www.google.com
+
+# wget => To download files from internet
+
+     wget <url>
+
+# curl => Used to send http request to server
+
+    curl <http url>
+
+# ifconfig => to see the IP address of the machine
+
+  ifconfig
+
+
+============================================================================================================================================================
+
+                                                                   16-July-24 
+                                                            ----------------------------
+
+
+=> yum is a package manager for amazon linex machine.
+
+
+
+# To install git software in linex
+
+   sudo yum install git
+
+# To check the git version
+
+  git --version
+
+# to check git installation path 
+
+   whereis git
+
+# to install java software in linex
+
+   sudo yum install java -y
+
+
+# to install maven in linex machine
+
+   sudo yum install maven -y
+
+
+====================================
+Web server setup in Linex machine
+====================================
+
+=> Webserver is a software which is used to run websites.
+
+=> Website means collection of webpages
+
+  Ex : Login page, Register page, dashboard page, about page....
+
+=> websites are of two types
+
+    1) Static web page  -> Gives same response for every user.
+
+    2) Dynamic webpage  -> gives difference response for different user.
+
+=> To run static websites, we can use 'httpd' as webserver
+
+=> to run dynamic websites, we can use 'tomcat, iis' as webserver.
+-----------------------------------------------------------------------------
+
+
+# To install httpd in linex machine
+
+   sudo yum install httpd -y
+
+
+# To check if the server is running/ active
+
+   sudo service httpd status
+
+# Start httpd server
+
+   sudo service httpd start    -> Check status again
+
+# Stop httpd server
+
+   sudo service httpd stop    -> Check status again
+
+---------------------------------------------------------------------------------------
+
+
+Note  => Http webserver runs on http protocol with 80 port number
+
+=> To access our webserver we need to enable http protocol in ec2 vm security group inbound rules.
+
+=> When we create a vm machine, a security group (firewall setting) also created for the machine. Its like a fire wall. 
+
+=> SO we can do some setting to what traffic should enter and what traffic should  exit from the security group.  
+
+=> Here we set some inbound rules and outbound rules in the group.
+
+
+Steps to enable security group setting
+-------------------------------------------
+
+-> check the running VM machine -> Select security tap -> Open the security group link in new tab -> Add rule -> Select 'type' http -> Select source to AnywhereIPv4 -> tap on save rules.
+
+=> Once http protocol enabled we can access our webserver using ec2-linex-VM public ip
+
+
+
+# Navigate to website content directory
+
+  cd /var/www/html
+
+# Create index.html file 
+
+  sudo vi index.html
+
+Note : httpd webserver runs on 80 port number
+
+=> To access our webserver we need to enable 80 port number in security group inbound rules.
+
+=> We can access our webserver using ec2-vm public IP.
+
+===================================
+Static website hosting in linex
+===================================
+
+# Install Webserver
+
+  sudo yum install httpd
+
+# start webserver
+  
+  sudo servive httpd start
+
+# navigate to website content directory
+
+  cd  /var/www/html
+
+# Create index.html file with website content 
+
+  sudo vi index.html
+
+Note : httpd webserver runs on 80 port number
+
+=> To access our webserver we need to enable 80 port number in security group inbound rules.
+
+=> We can access our webserver using ec2-vm  public IP. 
+
+
+==============================
+What is systemctl in linex ?
+==============================
+
+=> systemctl is used to manage the services in linex machines.
+
+=> Using systemctl we can perform below operations
+
+    1) Start a service
+    2) Stop a service
+    3) restart a service
+    4) enable/disable service
+
+# Stop httpd server
+
+  sudo systemctl stop httpd
+
+# start httpd server
+
+  sudo systemctl start httpd
+
+# Reload service
+
+  sudo systemctl reload httpd 	
+
+# To check status of the server
+
+ sudo service httpd status
+
+==========================================================
+
+free : to disply memory details
+
+top  : display running processes 
+
+htop : display running processes in table format
+
+
+#  to check linex OS version
+
+   cat /etc/os-release 
+
+# How to check linex kernel version
+
+  uname -r    / uname
+
+# To check from when the VM machine is running
+
+ uptime
+
+
+
+============================================================================================================================================================
+
+                                                                   18-July-24 Link Files
+                                                            ----------------------------
+
+
+==========================
+Working with link files
+==========================
+
+=> In Linex we can create link files (Similar to shortcut files in windows)
+
+=> we have two types of link files in linex
+
+   1) Hard link
+   
+   2) Soft link
+
+-----------------------------------
+Syntax to create hard link
+---------------------------------		
+
+# Syntax to create link file
+
+   ln <original file name> <link file name>
+
+ Ex: ln f1.txt f100.txt
+
+Note : f100.txt is the link file for f1.txt
+
+# To print files with inode numbers
+
+    ls -li
+
+Note : If we write some data to original file, it will reflect in link file also.
+
+Note : If we delete original file, the link file is not affected (because its Hard file) 
+
+------------------------------
+Syntax to create soft file
+------------------------------
+
+ ln -s <original file name> <link file name>
+
+ touch s1.txt
+
+ ln -s s1.txt s100.txt
+
+Note : Original file and link file has different inode number.
+
+   cat >> s1.txt
+
+ Original file data is reflecting in link file also. if we delete the original file, the link file also gets deleted.
+
+ # To remove file
+
+  rm s1.txt
+
+====================
+Process Management
+====================
+
+Process management in linex involves controlling and monitoring the execution of programs (processes) on the system.
+
+
+# Disply process running
+
+    ps aux
+
+Note : Every process will have one process id (PID)
+
+# to kill a process
+
+   kill PID
+
+# To kill a process from root / terminate process immediately
+
+  kill -9 PID
+================================================================
+1) What is Linex OS
+2) Windows vs Linex
+3) Linex VM setup in AWS clous
+20 connecting with linex machine using ssh_client
+4) File based operations
+5) Test editors
+6) Text filters
+7) Users Management
+8) File permissions
+9) File ownership 
+10) Archieves
+11) Networking 
+12) Suderos files
+13) sshd_config
+14) package managers
+15) static website hosting (httpd)
+16) Service Management (systemctl)
+17) Process management
+18) Working with link files.
+19) changing host name
+
+
+
+How to change hostname in Linex VM (Temporerly)
+===============================================
+# set hostname
+  
+  sudo hostname <new name>
+
+#Restart session
+
+  exit
+
+Note : Connect back to vm then we can see configured 	hostname
+
+
+How to set hostname permanently
+==============================
+
+update hostname in below file
+
+sudo vi /etc/hostname
+
+# restart the vm
+
+=> After restart hostname configured in file will be reflected in terminal 
+
+-----------------------------------------------------
+steps
+------
+ whoami
+ec2-user
+[ec2-user@ip-172-31-10-95 ~]$ cat /etc/hostname
+ip-172-31-10-95.us-east-2.compute.internal
+[ec2-user@ip-172-31-10-95 ~]$ sudo vi /etc/hostname
+[ec2-user@ip-172-31-10-95 ~]$ exit
+logout
+=> connect with ssh-client
+cat /etc/hostname
+Docker-server
+[ec2-user@ip-172-31-10-95 ~]$ sudo hostname Docker-server
+[ec2-user@ip-172-31-10-95 ~]$ exit
+logout
+=> connect with ssh-client
+[ec2-user@Docker-server ~]$
+
+
+
+
+
+=======================
+Linex architecture
+=======================
+
+=> Linex is free OS and open source
+
+=> Its multi-user based OS
+
+=> Linex is secured 
+
+=> Linex is CLI based OS
+
+=> Linex is highly recommended for project related servers
+
+ Ex  : database, Docker , Sonar, Jenkins, Nexus, K8s...
+
+===============================
+Linex Architecture components
+===============================
+
+1) Applications
+
+2) Shell 
+
+3) Kernal
+
+4) Hardware components
+
+====================
+What is shell ?
+====================
+
+=> Shell acts as mediator b/w user and Kernel 
+
+=> Shell is responsible to process user given commands
+
+Note : When we execute a command, shell verify command syntax. If command is valid,  then shell will convert that command into kernel understandable format.
+
+# Check default shell of our linex VM
+
+   echo $SHELL
+
+# disply all the shell supported by linex VM 
+
+$ cat /etc/shells
+
+	
+=========================
+What is Kernel in Linex ?
+=========================
+
+=> Kernel is heart of Linex OS
+
+=> Kernel is a mediator b/w SHELL and hardware components
+
+=> Kernel will get instructions from SHELL then kernel will convert that command into hardware understandable format.
+
+# print kernel version 
+  
+   uname -r
+
+
+======================
+What is scripting 
+======================
+
+=>  Scripting means set of commands we will keep in a file and we will execute that file.
+
+=> scripting is used to automate our daily routine works.
+
+=> For example i want to execute below commands on daily basis
+
+   whoami
+   psd
+   date
+   cal
+   ls -l
+
+Note : instead of executing these commands one after other manually we can keep them inside a file and we can execute our file which is called as scripting.
+
+=> The process of executing script file using shell is called as shell scripting. 
+
+=> shell scripting is used to automate our daily routine work in the project.
+
+   Ex :  a) take backup
+         b) delete  temp files
+         c) analyze log files
+         d) system health check
+
+=> Shell script files has an extension  ".sh"
+
+   Ex.. bash.sh, log-analyzer.sh, health-check.sh
+
+
+
+=========================================
+Difference b/w programming and scripting
+=========================================
+
+=> Programs should be compiled to convert into machine level language
+
+=> Scripts can be executed directly on the machine (No compilation)
+
+
+ Java program -> byte code -> JVM -> computer
+  
+ scripting -> computer
+
+
+=========================================
+what is sha-bang in linex
+=========================================
+
+=> Sha-bang is used to specify which shell we should use to process our scripts files.
+
+syntax : #! /bin/bash
+
+Note : writing sha-bang is not mandatory but recommended. 
+
+# To check shells 
+
+    cat /etc/shells
+
+
+
+============================================================================================================================================================
+
+                                                                   19-July-24 Link Files
+   
+                                                         ----------------------------
+touch 01script.sh
+[ec2-user@Docker-server ~]$ vi 01script.sh
+[ec2-user@Docker-server ~]$ sh 01script.sh
+Enter your first name
+Vamshi
+Enter your last name
+Ellandula
+Good Morning, Vamshi, Ellandula
+
+------------------------------------------------------------------------
+
+variable
+--------------
+-> Variables are used to store the values.
+
+-> variable will represent data in key-value format
+
+   a=10
+   b= 20
+   name = Ashok
+   gender = male
+   age = 20
+
+=> We dont have data types in shell scripting
+
+=> We have 2 types of variables
+
+   1) System variable/ environment variable
+   2) User defined variable
+
+
+System Variables
+====================
+
+=> The variable which are aleady defined and using by our system are called system  varibles.
+
+$echo $SHELL 
+$echo $USER
+$echo $PATH
+
+Note : WE can access all the environment variables using below commands
+ 
+   echo $valuename
+
+---------------------------------------------------------
+
+# To create variable and assign the value
+$ export AGE=20  
+
+# To access the value
+ $ echo AGE
+
+# To Delete the value
+ unset AGE
+
+NOTE
+==========
+
+=> If we use export command in terminal for setting variables then those variables will be removes once we close our terminal Those are called temporary variables. 
+
+====================================
+How to set variables permanently
+==================================== 
+
+=> we will use .bashrc files to set variables permanently for the user.
+
+=> IN our home directory, .bashrc files are available (It is hidden file)
+
+
+ls -la  -> To check the  hidden files
+$cat .bashrc
+
+	
+#Open .bashrc file
+vi .bashrc
+
+# Add variables at the end of the file
+cource=devops
+trainer=Ashok
+
+variables name characters are Upper case recommended 
+
+#Apply .bashrc changes
+source .bachrc
+
+
+#Access variables
+echo $source
+echo $trainer
+
+EX:
+
+[ec2-user@Docker-server ~]$ echo $TRAINER
+ASHOK
+
+=============================================
+How to set variables for all yours in linex
+=============================================
+
+$cat /etc/profile
+
+Note : If we add variables in /etc/profile then those variables will be available for all the users in Linex VM.
+---
+
+Rules for variable names
+---------------------------
+
+1) Variables cannot be start with numbers
+2) Variables name cannot contain special symbols
+  
+   Ex : -, @, #
+
+   It accepts _ , $ 
+
+3) Its recommended to use uppercase letters do write variables name. (not mandatory)
+
+
+
+[ec2-user@Docker-server ~]$ EXPORT CUSTOMER=VASI
+-bash: EXPORT: command not found
+[ec2-user@Docker-server ~]$ export CUSTOMER=VASI
+[ec2-user@Docker-server ~]$ export $NAME=VAMSHI
+-bash: export: `=VAMSHI': not a valid identifier
+[ec2-user@Docker-server ~]$ export CITGO=HARIS
+[ec2-user@Docker-server ~]$ echo $CITGO
+HARIS
+[ec2-user@Docker-server ~]$
+
+-------------------------------------------------------------------------------------------------------
+
+=============
+OPERATORS
+=============
+
+=> Operators are used to perform some operations on the variables
+
+10 + 20 => 30
+
+10 > 20 => False
+
+20 == 20 => true
+
+
+
+=======================
+Arithmetic Operators
+=======================
+
+Addition : +
+
+Subtraction : -
+
+Multiplication : * 
+
+Division : /
+
+Modulas : %
+
+
+----------------------------
+
+Syntax too perform Arithmetic operations
+
+	$((First_Number+Second_Number))
+
+	
+====================== Script (Addition) =========================
+
+echo "Enter First Number"
+read FNUM
+echo "ENter Last number"
+read LNUM
+
+echo "Result : $((FNUM+LNUM))"
+
+To execute file=>  sh 1Arith.sh
+
+Enter First Number
+10
+ENter Last number
+20
+Result : 30
+
+===============================================
+Relational / Comparision operators
+===============================================
+
+Equal : == or eq
+
+Not Equal : !=
+
+Greater than : > or gt or ge
+
+less than < or lt or le 
+	
+
+========================
+Conditional statements
+=======================
+
+=> Conditional statements are used to execute commands based on conditions
+
+Ex : 
+
+raed user age 
+if age is above 18 then print eligible to vote
+if age is less than 18, print not eligible to vote
+
+=> To implement conditional statememts we will use "if-elif-else" concepts
+
+Syntax : 
+
+if [Condition 1 ]; then
+
+// statement 1
+
+elif [condition 2]; then 
+
+// statement 2
+
+else 
+
+// statement 3
+
+--------------------------------------
+Script
+--------
+
+echo "Enter Your Age"
+read AGE
+if [ $AGE -ge 18 ]; then
+        echo "Eligible for vote"
+else
+        echo "Not Eligible for vote"
+fi
+
+
+
+echo "Enter your number"
+read NUM
+
+if [ $NUM -gt 0 ]; then
+        echo "Its a positive number"
+elif [ $NUM -lt 0 ]; then
+        echo "Its a negative number"
+else
+        echo "Its 0"
+
+fi
+
+
+============================================================================================================================================================
+
+                                                                   23-July-24 Link Files
+   
+                                                               ----------------------------
+
+Loop statements
+------------------
+=> Loops are sued to execute the statement multiple times
+
+=> In scripting, loops are 2 types
+ 
+    1) Range Based Loop (for loop)
+    2) Condition Based Loop (while loop)
+
+
+For Loop
+=========
+
+for (( initialization; condition, modification ))
+
+do 
+// statement 
+
+done
+
+Print numbers from 1 to 10
+=============================
+
+
+
+#! /bin/bash
+
+for((i=1; i<=10; i++))
+do
+echo $i
+done
+
+While Loop
+============
+
+=> Print numbers from 1 to 10 using while loop
+
+
+#! /bin/bash
+
+N=1
+while [ $N -le 10 ]
+do echo $N              ===> This is infinite loop, [ctrl+c to come out of loop]
+done
+
+-------------------------------
+
+#! /bin/bash
+
+N=1
+while [ $N -le 10 ]
+do echo $N
+let N++     ==> Increment by 1             
+done
+
+
+
+Functions and methods
+============================
+
+=> Functions are used to perform some actions or tasks
+
+=> Using functions we can divide big tasks into multiple small tasks
+
+=> Using functions we can divide our work logically.
+
+=> Functions are re-usable
+
+
+# Create function
+Syntax : function  functionName(){
+
+// functions (body)
+}
+
+#Call function for execution
+ 
+functionName
+
+--------------------------------------------------
+
+
+#! /bin/bash
+
+function welcome(){
+
+echo "Welcome to Ashok IT"
+
+}
+
+
+welcome
+
+
+Command Line Arguments
+==========================
+
+=> Cmd args are used to supply values to script file at the time of script execution
+
+sh task.sh 10 20 ashokit
+
+=> We can read cmd args in script like below
+
+$# => To get total no.of cmd args we passed
+
+$1 Read first cmd arg
+
+$2 Read second cmd arg
+
+$3 read third cmd arg
+
+$* Read all cmd arg
+
+---------------------------------
+
+#! /bin/bash
+
+echo "Total Args : $#"
+
+echo "First Arg : $1"
+
+echo "Second Arg : $2"
+
+echo "=================" 
+
+echo "All args : $*"
+
+
+============
+Summery
+============
+
+
+1) Linex Architecture
+2) What is shell 
+3) What is Kernel
+4) What is shell scripting & why
+5) programming vs scripting
+6) sha-bang
+7) variables (env & user defined variables)
+8) .bashrc files
+9) cmd arguments
+10) operators
+11) conditional statements (if-elif-else)
+12) Looping statements (for, while)
+13) Functions
+14) crontabs
+
+Assignment
+================
+1) write script to check a given number is prime or no
+
+2) Write script to check the given string is palindrome or no 
+  
+   Ex : Liril, madam, 
+
+3) white shell script to print table of given number
+
+4) Write a shell script to take backup of /home/ec2-user directory
+
+
+============================================================================================================================================================
+
+                                                                   24-July-24 
+   
+                                                               ---------------------
+What is scheduling ?
+---------------------
+
+shell script file : system-health-check.sh
+
+Everyday @9: 00 AM we have to run above shell script file
+
+=> Instead writing manually, we use scheduling 
+
+=> Scheduling means configuring the tasks to be executed automatically
+
+=> In Linex we will use CRON to schedule job/ scripts execution
+	
+=> CRON is an utility in linex to schedule jobs execution 
+
+=> In real-time we will use several jobs daily/weekly/monthly/yearly basis to automate our works
+
+     - Delete temp files
+     - Take backup of files
+     -	 System health check
+
+===================
+CRON JOb SYNTAX
+===================	
+
+Syntax : * * * * * <Script-File-Name>
+
+=> First * will represent minuets (0 - 59)
+
+=> Second * will represent Hours (0 - 23)
+
+=> Third * will represent day of month (0 - 31)
+
+=> Fourth * will represent Month of year (1 - 12)
+
+=> Fifth * will represent day of week (0 - 6 / sun - sat)
+
+
+==================
+What is CROND
+==================
+
+=> In Linex machines CROND id demon process (Background process)
+
+=> Every minute, CROND will be checking for CRON jobs schedule for the execution	
+
+
+=========================
+Sample CRON Schedules
+======================
+
+# Run for every 15 minuets
+
+* /15 * * * backup.sh
+
+# Run everyday @5:00 AM
+
+0 5 * * * backup.sh
+
+# Run everyday @5:00 PM 
+0 17 * * * backup.sh
+
+# First day of every month morning @9:00 AM
+
+0 9 1 * * backup.sh
+
+# Run job everyday @4:15 PM Mon - Fri
+
+15 16 * * 1-5 backup.sh
+
+
+
+--------------------------
+CRON Expression generator
+
+Web site : https://crontab.cronhub.io    //   https://crontab.guru/	 
+
+-----------------------------------------
+
+======================================
+Where to configure CRON jobs in Linex
+======================================
+
+=>  crontab file is used to configure cron jobs in linex
+
+# Open crontab file and configure job schedule
+crontab -e 
+
+# Display cron jobs schedulesx
+crontab -l
+
+# Remove crontab file
+crontab -r
+
+
+
+Note :   Add below job schedule info
+
+  */1 * * * *  /bin/bash /home/ubuntu/task.sh
+
+# Save and close the crontab file (ctrl + x + y + enter)
+
+After one minute check files got created or not
+
+$ ls -l
+
+crontab -l
+
+# To remove crontab file
+
+crontab -r
+
+====================
+Crontab practices
+=====================
+
+1)  Launch linex machine with ubuntu AMI
+
+2)  Connect with Linex VM using SSH client
+
+3)  Create shell script file and keep below content 
+
+      vi task.sh
+
+touch /home/ubuntu/f1.txt
+
+      touch /home/ubuntu/f2.txt
+
+4)  Provide execute permission for script file 
+
+      $ chmod +x task.sh // chmod 777 task.sh
+
+5)  Open crontab file and configure job schedule
+
+      $ crontab -e
+
+6)  Add below job schedule info
+
+     */1 * * * * /bin/bash /home/ubuntu/task.sh
+
+7)  Save and close the crontab file (ctlr + x + y + enter)
+
+8) Check the files are created or no
+
+    ls -l
+
+9) To remove crontab file
+
+   crontab -r
+
+
+
+=================================================
+
+Case conditional statements
+============================
+
+echo "Enter fruit name"
+
+read fruit
+
+case $fruit in 
+   "apple")
+   echo "I love apple"
+    ;;
+
+ "banana")
+   echo "banana is yello"
+    ;;
+
+  "grape")
+   echo "I love grape"
+    ;;
+
+etc...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
