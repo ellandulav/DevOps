@@ -10064,7 +10064,7 @@ Video in : ashoit youtube channel
 Project -2 : working with Docker Kubernetes and Jenkins.
 
 
-
+Then do practice
 
 
 
