@@ -8993,10 +8993,6 @@ What is Build and Deployment
 
 => Takes latest source code from git repo
 
-
-
-
-
 ===============
 
 Jenkins JOB
@@ -9012,21 +9008,11 @@ Git + maven + Jenkins + tomcat
 When code change in repo wwe can just see the changes in the browser
 
 
-
-
-
-
-
 =================================================================================================================================================================================
 
                                                                                     18-NOV-24
 
                                                                                   =============	
-
-
-
-
-
 ==================
 
 User Management
@@ -9060,13 +9046,6 @@ Note : For every team member Jenkins logins access will be provided.
 
 
 => By default everybody can access all the permissions
-
-
-
-
-
-
-
 
 
 =============================
@@ -9111,10 +9090,6 @@ Jenkins master
 
 => Jenkins master is responsible to distribute the load to slave machines.
 
-
-
-
-
 =====================
 
 Jenkins slave
@@ -9124,31 +9099,16 @@ Jenkins slave
 
 
 => It will receive the task from master to execute the jobs.
-
-
-
-
-
 =================================================================================================================================================================================
 
                                                                                     19-NOV-24
 
                                                                                   =============	
-
-
-
-
-
-
-
 working on setup creating master and slave machines
 
 
 
 ====================================================
-
-
-
 
 
 &nbsp;	
@@ -9327,18 +9287,11 @@ Assignment : Jenkins pipeline with Git + Maven + Tomcat
 
 =====================================================================
 
-
-
 =================================================================================================================================================================================
 
                                                                                     20-NOV-24
 
-                                                                                  =============	
-
-
-
-
-
+                                                                                  =============
 
 
 Assignment : Jenkins pipeline with Git + Maven + Tomcat
@@ -9672,37 +9625,20 @@ Jenkins Summery
 
 
 => Email notification in Jenkins
-
-
-
 => Shared libraries in Jenkins
-
-
 
 => Parallel stages execution in Jenkins
 
-
-
 => Scripted pipeline
 
-
-
 => Multi-branch pipeline
-
-
-
 
 
 =================================================================================================================================================================================
 
                                                                                     22-NOV-24
 
-                                                                                  =============
-
-
-
-
-
+                                                                                  ============
 =============================================================
 
 How to work with parallel stages in Jenkins pipeline
@@ -9718,11 +9654,6 @@ How to work with parallel stages in Jenkins pipeline
 &nbsp;	
 
 ========================practice pending ===============================
-
-
-
-
-
 
 
 ==========================================
@@ -9755,23 +9686,9 @@ What is shared library in Jenkins ?
 
 &nbsp;        Trains-api ====> Jenkins pipeline
 
-
-
-
-
 => Instead writing common logic in every pipeline we can create shared library and we can re-use it 
 
-
-
-
-
 Notes : Shared library we can store in git repo 
-
-
-
-
-
-
 
 ========================================
 
@@ -9779,21 +9696,11 @@ What is shared library in Jenkins
 
 =================================
 
-
-
-
-
 step-1 : create shared library and store it in git repo
-
-
 
 &nbsp; Git repo url : https://github.com/ashokitschool/my\_shared\_libraries.git
 
-
-
 step-2: Configure shared library in Jenkins
-
-
 
 &nbsp; => manage Jenkins f=> Configure system
 
@@ -9807,12 +9714,6 @@ step-2: Configure shared library in Jenkins
 
 step-3: Create Jenkins pipeline and use above created shared libraries 
 
-
-
-
-
-
-
 ============================
 
 Jenkins Scripted pipeline
@@ -9820,30 +9721,17 @@ Jenkins Scripted pipeline
 =============================
 
 
-
 => Scripted pipelines are used to define CI CD workflow using groovy scripting.
-
-
 
 => Scripted pipeline will provide more flexibility and more control on pipeline stages execution.
 
-
-
 => We can implement error handling logic in programmatic way using scripted pipelines.
-
-
-
-
 
 ==================================
 
 scripted pipeline syntax
 
 ===============================
-
-
-
-
 
 node {
 
@@ -9864,14 +9752,7 @@ stage('maven build')
 echo 'maven build process..'
 }
 
-
-
-
 }
-
-
-
-
 
 =============================================================================================
 
@@ -9885,12 +9766,7 @@ Assignment : 1 :git + maven + tomcat integration in scripted pipeline
 
 &nbsp;  ref video : from ashokit channel
 
-==========================================================================================
-
-
-
-
-
+=========================================================================================
 
 
 =================================================================================================================================================================================
@@ -9905,15 +9781,9 @@ Assignment : 1 :git + maven + tomcat integration in scripted pipeline
 
 **==================================**
 
-
-
 => Git repo is used for source code integration
 
-
-
 => In git repo we will have multiple branches
-
-
 
 &nbsp;a) main
 
@@ -9923,19 +9793,9 @@ Assignment : 1 :git + maven + tomcat integration in scripted pipeline
 
 &nbsp;d) release
 
-
-
 => Jenkins pipeline taking code from particular branch and perform build and deployment process.
 
-
-
 => When I execute Jenkins pipeline code it has to build the code which is available in all the branches of given git repository.  Then we can use multi branch pipeline.
-
-
-
-
-
-
 
 =============================
 
@@ -9947,15 +9807,9 @@ Role Management in Jenkins
 
 => We can access to users by using roles concept.
 
-
-
 Role based matrix strategy plugin
 
-
-
 plugin name : Role based authorization strategy
-
-
 
 => Create role
 
@@ -9964,78 +9818,41 @@ plugin name : Role based authorization strategy
 => Add users to the role
 
 
-
-
-
-
-
-
-
 =================================================================================================================================================================================
 
                                                                                     26-NOV-24
 
-                                                                                  =============
-
-
-
-
-
+                                                                                  ============
 => Working practice with multi branch pipeline
-
-
-
 
 
 ============
 
 Sonar
-
-
-
-
-
 =================================================================================================================================================================================
 
                                                                                     27-NOV-24
 
-                                                                                  =============
-
-
-
+                                                                                  ============
 ===============
 
 SonarQube
 
 ==============
 
-
-
 => Code quality checking software or Code review software
-
-
 
 => Using SonarQube we can perform code review to identify developers mistake in the code.
 
-
-
 => SonarQube software developed by using Java language
 
-
-
 => SonarQube supporting 30+ languages code review 
-
-
-
-
 
 ================
 
 Sonar Issues
 
 =================
-
-
 
 => SonarQube server will identify below types of issues in the project
 
@@ -10048,20 +9865,11 @@ Sonar Issues
 &nbsp;       b) Vulnerabilities (Security hotpots)
 
 
-
 &nbsp;       c) Code smell (not danger, but week design)
-
-
 
 &nbsp;       d) Duplicate code blocks
 
-
-
 &nbsp;       e) Code coverage (how many lines of code is tested)
-
-
-
-
 
 Note : DevOps team is responsible to perform code review and send code review report to the development team.
 
@@ -10076,49 +9884,26 @@ Sonar Quality Profiles
 
 ========================
 
-
-
 => Set of rules to perform code reviews.
-
-
 
 => In SonarQube for every language one quality profile available
 
-
-
 &nbsp; Java project ==> Java Quality Profile  ==> Java Rules
-
-
 
 &nbsp; Python Project ==> Python Quality Profile ==> Python Rules
 
-
-
 &nbsp; PHP Project ==> PHP Quality Profile ==> Python Rules
-
-
-
-
-
-
 
 ========================
 
 Sonar Quality Gate
 
 ========================
-
-
-
 => Quality Gate represents overall project code quality is passed or failed.
 
 
 
 Note : If project quality gate is failed then we should not deploy that code.
-
-
-
-
 
 ====================
 
@@ -10141,14 +9926,7 @@ default username : admin
 default password : admin
 
 
-
-
-
-
-
 Sanity testing 
-
-
 
 ==========================
 
@@ -10156,45 +9934,25 @@ Sonar server setup in CI CD
 
 =============================
 
-
-
 => To integrate Sonar Server in Jenkins pipeline we need sonar server token.
-
-
 
 => Steps to generate a token
 
-
-
 &nbsp;  Goto profiles => my account => Security => Generate Token
-
-
 
 Token :  sqa\_f0ea874e93f93894a1fc55296cd56df3923bb5a5
 
 Note : In Jenkins pipeline after maven build process completed we will perform code review using SonarQube server.
 
-
-
 Note : We can user sonar trial version for practice
 
-
-
 => In company we will use sonar enterprise version (commercial)
-
-
-
-
 
 =======================
 
 Artifactory Server
 
 ======================
-
-
-
-
 
 =======================================
 
