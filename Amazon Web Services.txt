@@ -10067,55 +10067,550 @@ Project -2 : working with Docker Kubernetes and Jenkins.
 Then do practice
 
 
+=================================================================================================================================================================================
+
+                                                                                    03-DEC-24
+
+                                                                                  =============
+
+
+
+Resume building
+======================
+
+some ecommerce projects
+==============================
+
+1) www.nykaa.com
+2)  www.milton.com
+3)  www.decathlon.in
+4)  www.godrejinterio.com
+5)  www.bantia.com
+
+
+
+=================================================================================================================================================================================
+
+                                                                                    04-DEC-24
+
+                                                                                  =============
+
+self introduction 
+==================
+
+4 parts
+---------------
+
+part -1 : your details : name, exp, role , company  name
+
+part -2 : Technical Skills
+
+part -3 : Your project
+
+part -4 : Roles and responsibilities
+
+=> Hi, I am Ashok having total3.5 years of experience as a DevOps engineer with aws cloud platform and currently I am working as DevOps engineer with XYZ company.
+
+=> Coming to my technical skills, I am having hands on experience with several DevOps tools like terraform, ansible, git , sonar, nexus, docker, k8s, Jenkins. eks, etc..
+
+=> I am having experience with AWS cloud services like EC2, RDS, Iam , VPC, S3, EKS , CloudWatch, sns etc.
+
+=> I am having good experience with Linux VMs
+
+=> Coming to y project, I am working with health insurance system which is providing health and insurance plans to Rhode Island state citizens in USA.
+
+Front end : angular
+backend : Java Spring boot microservices 
+Database : Oracle
+
+=> Coming to my roles and responsibilities
+
+1) Create infrastructure in AWS Cloud using Terraform scripts
+
+2) Configuration management using ansible playbooks
+
+3) Managing source code repositories in bitbucket
+
+4) User Management bitbucket
+
+5) Managing application environment (DEV, SIT, UAT, PROD)
+
+6) Managing Docker files and Images
+
+7) Creating k8s manifest files
+
+8) CI CD pipelines creation and monitoring
+
+9) Code quality checking
+
+10) Monitoring and managing application logs
+
+
+============================================
+Day to day activities of a DevOps engineer
+============================================
+
+=> First thing we need to check our email official inbox
+
+=> If required we need to reply to those email 
+
+=> Check meeting schedules for the day and get ready for those meetings
+
+=> Check Jira dashboards and work on tasks which are assigned on your name.
+
+Note : If task is not assigned then check pending tasks and assign pending tasks to your name start working on that. If no pending task not available then inform your lead/ scrum master / manager regarding that.
+
+
+=> join daily scrum calls and give work updates to scrum master.
+
+- working on which story 
+
+- when it will be completed 
+
+- any challenges to complete it 
+
+- any help required 
+
+- any blockers
+
+Note : If you are not able to join scrum call for today then send work updated to scrum master in email.
+
+	
+===========================================================
+What kind of tasks will be assigned to DevOps engineer ?
+=============================================================
+
+1) Infrastructure creation
+
+	Ex : 	Setup EKS Cluster, Setup SonarQube server, Setup Jenkins server.
+2) write ansible playbooks
+
+3) Setup new environment (DEV/ SIT/ UAT/ PROD) (server setup)
+
+4) Source code repo creation 
+
+5) Manage users and users permissions in repo
+
+6) Setup CI CD pipelines for build and deployment
+
+7) Monitoring application (Grafana, premethios, ELK)
+
+8) POC (Proof of Concept) (experiment)
+
+9) Documentation
+
+10) Provide KT sessions
+
+11) Conduct internal training sessions
+
+
+
+=================================================================================================================================================================================
+
+                                                                                    06-DEC-24
+
+                                                                                  =============
+
+================================
+3 tier architecture project
+================================
+
+=> Application contains 3 layers 
+
+   1) Database
+
+   2) backend app
+
+   3) Front end app
+
+
+=> Database is used to store data permanently
+
+=> Backend app contains business logic
+
+  Ex : Amount debit, amount credit, send OTP , send email, validate credentials.. etc..
+
+=> Front end contains presentation logic  (User Interfaces)
+
+
+
+Step -1 : Setup MySQL DB in AWS cloud using RDS
+
+Note : Once RDS instance is created note down below details
+
+  DB Endpoint : 
+  DB Username:
+  Db password: 
+  Db initial name : ashokit_ecomm
+
+Step -2 : Connect with MySQL using MySQL workbench and execute SQL queries to load data into database tables.
+
+Note : DB queries files available in backend_api git repo
+
+backend api git repo : https://github.com/ashokitschool/01_products_api.git
+
+DB queries file name : DB_Setup.sql
+
+Step -3: Configure database properties in backend application
+
+step-4 : Deploy backend application using Jenkins CI CD pipelines with below devOps tools
+
+ a) Git hub
+ b) Maven
+ c) SonarQube
+ c) Docker
+ d) K8S deployment
+
+
+
+step -5 : Access backend API url and test it working or no
+
+step -6 : Configure backend app URL in front end application
+
+step-7 ; Create Jenkins pipeline to deploy front end application using below tools
+
+   1) Git hub 
+   2) Docker
+   3) k8S
+
+step 8: Access front end application and test it 	
+
+
+to complete deployment of 3 tier application 
+---------------------------------------------
+
+youtube video : https://youtu.be/6cX8l22CKCI
+
+f
+
+=================================================================================================================================================================================
+
+                                                                                    17-DEC-24
+
+                                                                                  =============
+
+
+Self introductions................
 
 
 
 
 
+=================================================================================================================================================================================
+
+                                                                                    19-DEC-24
+
+                                                                                  =============
+
+
+ashok mock interview....
 
 
 
 
+=================================================================================================================================================================================
+
+                                                                                    20-DEC-24
+
+                                                                                  =============	
+
+=======================
+What is HELM ?
+======================
+
+=> In Linux we will use package managers to install a softwere.
+
+Ex : yum, apt, 	rpm etc..
+
+=> HELM is a package manager which is used to install required software's in k8S cluster
+
+=> HEL will use charts to install required packages.
+
+=> Charts means collection of configuration files (manifest yml)
+
+=> Using HELM charts we can install promethuesa and grafana server.
+
+
+
+===========================
+HELM installation
+=============================
+
+$ curl -fsSl -o get_heml.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+
+$ chmod 700 get_helm.sh
+
+$ ./get_helm.sh
+
+$ helm
+
+
+
+=> Check do we have metric server on the cluster
+
+$ kubectl top pods
+$ kubectl top nodes
+
+#check helm repos
+$helm repo ls
+
+# Add the  metric server repo to helm 
+$ helm repo add metrics-server metrics-server/metrics-server 
+
+# kubectl top pods
+
+# kubectl top nodes
+
+
+=================================
+install Prometheus and Grafana 
+=====================================
+
+steps ...
+
+
+everything about Prometheus , Grafana .. working with all the real time 
+
+
+
+=================================================================================================================================================================================
+
+                                                                                    23-DEC-24
+
+                                                                                  =============	
+
+1) Node Selector in K8s 
+2) Node Affinity
+3) Taints
+4) Tolerations
+
+===================
+Node Selector
+================
+
+=> Node selector is used to schedule the pods on particular worker node only.
+
+=> To achieve this we can assign label for the worker node and we can configure that worker node label in our manifest yml as node selector.
+
+Note : If node selector is matching with worker node label then our pods will be created on that particular worker node. If node selector  not matching with worker node label then pods will not be scheduled for execution.
+
+=> Execute below manifest yml to create nginx deployment with 3 pod replicas
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      nodeSelector:
+        name: ashokit-wn-1
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+
+...
+
+$ kubectl apply -f <yml>
+
+$ kubectl get pods
+
+Note : Here pods will be in pending state because no worker node label is matching with node selector 	configured in manifest yml file.
+
+# Configure label for worker node
+$ kubectl get pods
+kubectl edit node <node-name>
+
+# configure below label under label section  
+name : ashotit-wn-1
+
+$ kubectl get pods
+
+Note : here pods will come to running state.
+
+==================================================================================================================
+
+
+
+===================
+Node Affinity
+================
+
+=> Node Affinity works based on proffered approach. If node selector is matching with any worker node label then schedule pods on that worker node only. If match is not found then schedule pods on any available worker node in the cluster.
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: name
+            operator: In
+            values:
+            - ashokit
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+
+...
+
+
+$ kubectl apply -f <yml>
+
+$ kubectl get pods -o wide 
+
+
+==============
+Taints
+==============
+
+=> Taints are used to 	make worker nodes not available for pod scheduling.
+
+=> We have 3 popular tains
+
+1) No schedule
+
+2) No Execute
+
+3) prefer no schedule 
+
+# Create taint for worker node 
+$ kubectl taint nodes <node-name> key1=value1:NoSchedule
+
+# remove taint from worker node 
+$ kubectl taint nodes <node-name> key1=value1:NoSchedule-
+
+
+====================
+Tolerations
+=====================
+
+
+
+====================================================================================================================================================================================
+
+                                                                                    25-DEC-24
+
+                                                                                  =============	
+
+===============
+PV $ PVC
+================
+
+PVC : persistence Volume Claim
+
+PV : persistence Volume
+
+
+=> PV is sued to request storage for the pods
+
+=> PVC will request for PV using storage classes
+
+=> Storage classes will provide different types of storages for PV 
+
+  Ex: efs, ebs, standard etc..
+
+=> PV provides storage for the resources in k8s 
+
+Note : PV and PVC will use with the stateful set
+
+
+========================================================================
+NOte : Difference between Deployment vs Statefulset vs DeamonSet
+============================================================================
+
+================================
+Liveness and Readyness Probes
+===============================
+
+Liveness Probes : Its used to determine POD is still running or no. If POD is not running then k8s will restart that pod based on restart policy.
+
+Readyness Probe : Its used to determine POD is ready to serve request or no. If POD is not ready to serve the request then k8s will remove that pod from the load balancer.
+
+
+-------------------sample docker file -----------------
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+...
 
 
 
 
+====================================================================================================================================================================================
+
+                                                                                    03-Jav-25
+                                                                                  =============	
+
+======================================================
+Complete end to end project hands on experience 
+======================================================
+
+========================
+3 tier project setup
+=======================
+
+=> Application contains 3 layers
+
+ 1) database 
+ 2) Backend
+ 3) Frontend
 
 
+===============
+DB setup 
+==============
 
+Step-1 : Setup AWS RDS MuSQL instance and note down db details
 
+DB Endpoint : 
+DB Username : admin
+DB password : admin4321
+DB initial name ; ashokit_ecomm
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+step-2 : Connect with my SQL DB with workbench
 
 
 
